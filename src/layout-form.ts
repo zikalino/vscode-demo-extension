@@ -101,7 +101,7 @@ export var layoutForm: any = [
         {
           type: 'panel',
           id: 'panb',
-          label: 'Install New',
+          label: 'Fields Demo',
           subitems: [
             {
               type: 'fieldset',
@@ -114,7 +114,7 @@ export var layoutForm: any = [
                     {
                       type: 'combo',
                       id: 'sdk_type',
-                      name: 'SDK Type',
+                      name: 'Combo with Details',
                       items: [
                         { name: 'ESP-IDF', description: 'Espressif ESP-IDF IoT Development Framework' }
                       ]
@@ -122,11 +122,11 @@ export var layoutForm: any = [
                     {
                       type: 'combo',
                       id: 'sdk_version',
-                      name: 'Version',
+                      name: 'Basic Combo',
                       items: [
-                        { name: 'v5.1.3', description: 'Latest version of ESP-IDF' },
-                        { name: 'v5.1.2', description: 'Stable version of ESP-IDF' },
-                        { name: 'develop', description: 'Develop branch' },
+                        'v5.1.3',
+                        'v5.1.2',
+                        'develop'
                       ]
                     }
                   ]

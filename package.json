@@ -25,7 +25,6 @@
         "command": "vscode-demo-extension.displayFormDemo",
         "title": "demo: Form Demo"
       }
-
     ]
   },
   "scripts": {
