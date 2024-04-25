@@ -1,0 +1,68 @@
+{
+  "name": "vscode-tinygo-extension",
+  "displayName": "Experimental TinyGo Extension",
+  "description": "Experimental TinyGo Extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-tinygo-extension.welcomeA",
+        "title": "tinygo: Welcome (no SDK installed yet)"
+      },
+      {
+        "command": "vscode-tinygo-extension.manageSdks",
+        "title": "tinygo: Manage SDKs"
+      },
+      {
+        "command": "vscode-tinygo-extension.browseExamples",
+        "title": "tinygo: Browse Examples"
+      },
+      {
+        "command": "vscode-tinygo-extension.newProjectX",
+        "title": "tinygo: New ProjectX"
+      },
+      {
+        "command": "vscode-tinygo-extension.displayGenericForm",
+        "title": "tinygo: Display Generic Form"
+      }
+
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node ./esbuild.js",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "@vscode/codicons": "0.0.20",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "esbuild": "^0.16.17",
+    "eslint": "^8.54.0",
+    "jsdom": "^24.0.0",
+    "jsdom-global": "^3.0.2",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.4.0",
+    "marked": "^12.0.1",
+    "yaml": "^2.3.4"
+  }
+}
