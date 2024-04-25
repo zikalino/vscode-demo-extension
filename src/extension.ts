@@ -17,28 +17,28 @@ export function activate (context: vscode.ExtensionContext) {
 
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "vscode-tinygo-extension" is now active!');
+  console.log('Congratulations, your extension "vscode-demo-extension" is now active!');
 
-  var disposable = vscode.commands.registerCommand('vscode-tinygo-extension.manageSdks', () => {
+  var disposable = vscode.commands.registerCommand('vscode-demo-extension.manageSdks', () => {
     manageSdks();
   });
 
-  disposable = vscode.commands.registerCommand('vscode-tinygo-extension.welcomeA', () => {
+  disposable = vscode.commands.registerCommand('vscode-demo-extension.welcomeA', () => {
     welcomeA();
   });
 
-  disposable = vscode.commands.registerCommand('vscode-tinygo-extension.browseExamples', () => {
+  disposable = vscode.commands.registerCommand('vscode-demo-extension.browseExamples', () => {
     browseExamples();
   });
 
   disposable = vscode.commands.registerCommand(
-    'vscode-tinygo-extension.displayGenericForm',
+    'vscode-demo-extension.displayGenericForm',
     () => {
       displayGenericForm();
     }
   );
 
-  disposable = vscode.commands.registerCommand('vscode-tinygo-extension.newProjectX', () => {
+  disposable = vscode.commands.registerCommand('vscode-demo-extension.newProjectX', () => {
     newProjectX();
   });
 

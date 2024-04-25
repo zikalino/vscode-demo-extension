@@ -1,6 +1,6 @@
-# vscode-tinygo-extension README
+# vscode-demo-extension README
 
-This is the README for your extension "vscode-tinygo-extension". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "vscode-demo-extension". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

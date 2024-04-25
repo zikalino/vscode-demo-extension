@@ -1,7 +1,7 @@
 {
-  "name": "vscode-tinygo-extension",
-  "displayName": "Experimental TinyGo Extension",
-  "description": "Experimental TinyGo Extension",
+  "name": "vscode-demo-extension",
+  "displayName": "Experimental demo Extension",
+  "description": "Experimental demo Extension",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -14,24 +14,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-tinygo-extension.welcomeA",
-        "title": "tinygo: Welcome (no SDK installed yet)"
+        "command": "vscode-demo-extension.welcomeA",
+        "title": "demo: Welcome (no SDK installed yet)"
       },
       {
-        "command": "vscode-tinygo-extension.manageSdks",
-        "title": "tinygo: Manage SDKs"
+        "command": "vscode-demo-extension.manageSdks",
+        "title": "demo: Manage SDKs"
       },
       {
-        "command": "vscode-tinygo-extension.browseExamples",
-        "title": "tinygo: Browse Examples"
+        "command": "vscode-demo-extension.browseExamples",
+        "title": "demo: Browse Examples"
       },
       {
-        "command": "vscode-tinygo-extension.newProjectX",
-        "title": "tinygo: New ProjectX"
+        "command": "vscode-demo-extension.newProjectX",
+        "title": "demo: New ProjectX"
       },
       {
-        "command": "vscode-tinygo-extension.displayGenericForm",
-        "title": "tinygo: Display Generic Form"
+        "command": "vscode-demo-extension.displayGenericForm",
+        "title": "demo: Display Generic Form"
       }
 
     ]
