@@ -14,20 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-demo-extension.welcomeA",
+        "command": "vscode-demo-extension.displayWelcomeDemo",
         "title": "demo: Welcome Screen Demo"
-      },
-      {
-        "command": "vscode-demo-extension.manageSdks",
-        "title": "demo: Manage SDKs"
       },
       {
         "command": "vscode-demo-extension.browseExamples",
         "title": "demo: Browse Examples"
-      },
-      {
-        "command": "vscode-demo-extension.newProjectX",
-        "title": "demo: New ProjectX"
       },
       {
         "command": "vscode-demo-extension.displayFormDemo",
