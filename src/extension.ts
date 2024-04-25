@@ -265,6 +265,12 @@ import { layoutTabbedForm } from "./layout-tabbed-form";
 async function displayFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutForm);
+
+  view.MsgHandler = function (msg: any) {
+    if (msg.command === 'button-clicked') {
+      vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+    }
+  };
 }
 
 async function displayTabbedFormDemo () {

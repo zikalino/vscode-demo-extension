@@ -133,7 +133,8 @@ export var layoutForm: any = [
           },
           {
             type: 'button',
-            id: 'buttonx'
+            id: 'buttonx',
+            text: "Button"
           },
           {
             type: 'textarea',
