@@ -34,6 +34,13 @@ export function activate (context: vscode.ExtensionContext) {
     }
   );
 
+  disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayTabbedFormDemo',
+    () => {
+      displayTabbedFormDemo();
+    }
+  );
+
   context.subscriptions.push(disposable);
 }
 
@@ -253,8 +260,14 @@ Just something should go here....
 }
 
 import { layoutForm } from "./layout-form";
+import { layoutTabbedForm } from "./layout-tabbed-form";
 
 async function displayFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutForm);
+}
+
+async function displayTabbedFormDemo () {
+  let view = new GenericWebView(extensionContext, "Generic");
+  view.createPanel(layoutTabbedForm);
 }

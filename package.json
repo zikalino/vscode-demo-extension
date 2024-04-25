@@ -24,7 +24,12 @@
       {
         "command": "vscode-demo-extension.displayFormDemo",
         "title": "demo: Form Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displayTabbedFormDemo",
+        "title": "demo: Tabbed Form Demo"
       }
+
     ]
   },
   "scripts": {
