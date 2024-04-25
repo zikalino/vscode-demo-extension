@@ -48,12 +48,13 @@ async function displayWelcomeDemo() {
   view.createPanel(layoutWelcome);
 }
 
-async function browseExamples() {
+import { dataExamples } from "./data-examples";
 
+async function browseExamples() {
 
   let populateMsg = {
     command: 'populate',
-    data: {}
+    data: dataExamples
   };
 
   let setActionsMsg = {
@@ -254,8 +255,6 @@ Just something should go here....
 import { layoutForm } from "./layout-form";
 
 async function displayFormDemo () {
-
-
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutForm);
 }
