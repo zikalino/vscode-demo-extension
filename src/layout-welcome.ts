@@ -3,7 +3,8 @@ export var layoutWelcome = {
   header: [
     {
       type: 'header',
-      title: 'Demo Extension'
+      title: 'Demo Extension',
+      logo: 'logo.svg'
     }
   ],
   footer: [
