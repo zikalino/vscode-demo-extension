@@ -15,7 +15,7 @@
     "commands": [
       {
         "command": "vscode-demo-extension.welcomeA",
-        "title": "demo: Welcome (no SDK installed yet)"
+        "title": "demo: Welcome Screen Demo"
       },
       {
         "command": "vscode-demo-extension.manageSdks",
@@ -30,8 +30,8 @@
         "title": "demo: New ProjectX"
       },
       {
-        "command": "vscode-demo-extension.displayGenericForm",
-        "title": "demo: Display Generic Form"
+        "command": "vscode-demo-extension.displayFormDemo",
+        "title": "demo: Form Demo"
       }
 
     ]
