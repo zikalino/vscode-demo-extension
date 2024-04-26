@@ -32,6 +32,10 @@
       {
         "command": "vscode-demo-extension.displayNewProjectDemo",
         "title": "demo: New Project Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displaySetupDemo",
+        "title": "demo: Setup Demo"
       }
     ]
   },

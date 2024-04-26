@@ -42,6 +42,13 @@ export function activate (context: vscode.ExtensionContext) {
   );
 
   disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displaySetupDemo',
+    () => {
+      displaySetupDemo();
+    }
+  );
+
+  disposable = vscode.commands.registerCommand(
     'vscode-demo-extension.displayTabbedFormDemo',
     () => {
       displayTabbedFormDemo();
@@ -297,4 +304,11 @@ import { layoutNewProject } from "./layout-new-project";
 async function displayNewProjectDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutNewProject);
+}
+
+import { layoutSetup } from "./layout-setup";
+
+async function displaySetupDemo () {
+  let view = new GenericWebView(extensionContext, "Setup");
+  view.createPanel(layoutSetup);
 }
