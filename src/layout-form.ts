@@ -232,5 +232,13 @@ export var layoutForm: any = {
       ]
     }
   ],
-  footer: {}
-}
+  footer: {
+    type: 'footer',
+    id: 'footer',
+    subitems: {
+      type: 'button',
+      id: 'close',
+      text: 'Close'
+    }
+  }
+};

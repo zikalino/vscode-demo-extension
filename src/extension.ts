@@ -35,6 +35,13 @@ export function activate (context: vscode.ExtensionContext) {
   );
 
   disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayNewProjectDemo',
+    () => {
+      displayNewProjectDemo();
+    }
+  );
+
+  disposable = vscode.commands.registerCommand(
     'vscode-demo-extension.displayTabbedFormDemo',
     () => {
       displayTabbedFormDemo();
@@ -269,6 +276,9 @@ async function displayFormDemo () {
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'button-clicked') {
       vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+      if (msg.id === 'close') {
+        view.close();
+      }
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
     } else if (msg.command === 'dropdown-clicked') {
@@ -280,4 +290,11 @@ async function displayFormDemo () {
 async function displayTabbedFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutTabbedForm);
+}
+
+import { layoutNewProject } from "./layout-new-project";
+
+async function displayNewProjectDemo () {
+  let view = new GenericWebView(extensionContext, "Generic");
+  view.createPanel(layoutNewProject);
 }

@@ -28,8 +28,11 @@
       {
         "command": "vscode-demo-extension.displayTabbedFormDemo",
         "title": "demo: Tabbed Form Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displayNewProjectDemo",
+        "title": "demo: New Project Demo"
       }
-
     ]
   },
   "scripts": {
