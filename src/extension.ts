@@ -271,6 +271,8 @@ async function displayFormDemo () {
       vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
+    } else if (msg.command === 'dropdown-clicked') {
+      vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked!');
     }
   };
 }
