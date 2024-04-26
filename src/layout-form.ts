@@ -164,9 +164,15 @@ export var layoutForm: any = {
               type: 'radiogroup',
               subitems: [
                 {
+                  id: 'radio_1',
+                  value: 'r1',
+                  text: 'Radio 1',
                   type: 'radio'
                 },
                 {
+                  id: 'radio_2',
+                  value: 'r2',
+                  text: 'Radio 2',
                   type: 'radio'
                 }
               ]

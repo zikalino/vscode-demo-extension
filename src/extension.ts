@@ -269,6 +269,8 @@ async function displayFormDemo () {
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'button-clicked') {
       vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+    } else if (msg.command === 'radio-clicked') {
+      vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
     }
   };
 }
