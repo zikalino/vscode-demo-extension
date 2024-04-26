@@ -159,7 +159,6 @@ export var layoutForm: any = {
             {
               type: 'link'
             },
-
             {
               type: 'radiogroup',
               subitems: [
@@ -176,6 +175,11 @@ export var layoutForm: any = {
                   type: 'radio'
                 }
               ]
+            },
+            {
+              type: 'checkbox',
+              text: 'Sample Checkbox',
+              id: 'checkbox_id'
             }
           ]
         }
