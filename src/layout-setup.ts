@@ -11,7 +11,7 @@ export var layoutSetup: any = {
   form: [
     {
       type: 'fieldset',
-      id: 'fieldset_1',
+      id: 'main_fieldset',
       subitems: [
         {
           type: 'row',
@@ -53,44 +53,23 @@ export var layoutSetup: any = {
     },
     {
       type: 'fieldset',
-      id: 'fieldset_2',
+      id: 'fieldset_tinygo',
       subitems: [
         {
-          type: 'row',
-          id: 'xrow_1',
-          narrow: true,
-          subitems: [
-            {
-              type: 'textfield',
-              id: 'project_name',
-              name: 'Project Name'
-            }
-          ]
+          type: 'step',
+          id: 'step_tinygo_install_go',
+          description: 'Install Go',
+          verify: 'go --version',
+          install: 'scoop install go'
         },
         {
-          type: 'row',
-          id: 'xrow_2',
-          narrow: true,
-          subitems: [
-            {
-              type: 'textfield',
-              id: 'project_location',
-              name: 'Project Location'
-            }
-          ]
-        },
-        {
-          type: 'row',
-          id: 'xrow_3',
-          narrow: true,
-          subitems: [
-            {
-              type: 'checkbox',
-              id: 'initialize_git_repo',
-              name: 'Initialize Git Repository'
-            }
-          ]
+          type: 'step',
+          id: 'step_tinygo_install_tinygo',
+          description: 'Install TinyGo',
+          verify: 'scoop install tinygo',
+          install: 'tinygo --version'
         }
+
       ]
     }
   ],
@@ -101,7 +80,6 @@ export var layoutSetup: any = {
       subitems: [
         {
           type: 'button',
-          id: 'button_create',
           text: 'Create'
         }
       ]
