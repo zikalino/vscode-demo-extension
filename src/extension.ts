@@ -274,7 +274,9 @@ Just something should go here....
   view.createPanel(formDefinition);
 }
 
-import { layoutForm } from "./layout-form";
+//import { layoutForm } from "./layout-form";
+var layoutForm: any = require('./layout-form.yaml');
+
 import { layoutTabbedForm } from "./layout-tabbed-form";
 
 async function displayFormDemo () {
