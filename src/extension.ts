@@ -62,7 +62,8 @@ export function activate (context: vscode.ExtensionContext) {
 export function deactivate () {}
 
 
-import {layoutWelcome } from "./layout-welcome";
+//import {layoutWelcome } from "./layout-welcome";
+var layoutWelcome: any = require('./layout-welcome.yaml');
 
 async function displayWelcomeDemo() {
   let view = new GenericWebView(extensionContext, "Welcome!");

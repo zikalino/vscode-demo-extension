@@ -1,11 +1,13 @@
 // file: esbuild.js
 
 const { build } = require("esbuild");
+const { yamlPlugin } = require("esbuild-plugin-yaml");
 
 const baseConfig = {
   bundle: true,
   minify: process.env.NODE_ENV === "production",
   sourcemap: process.env.NODE_ENV !== "production",
+  plugins: [ yamlPlugin() ]
 };
 
 const extensionConfig = {
