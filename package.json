@@ -36,6 +36,10 @@
       {
         "command": "vscode-demo-extension.displaySetupDemo",
         "title": "demo: Setup Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displayCanvasDemo",
+        "title": "demo: Canvas Demo"
       }
     ]
   },

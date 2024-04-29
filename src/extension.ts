@@ -49,6 +49,13 @@ export function activate (context: vscode.ExtensionContext) {
   );
 
   disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayCanvasDemo',
+    () => {
+      displayCanvasDemo();
+    }
+  );
+
+  disposable = vscode.commands.registerCommand(
     'vscode-demo-extension.displayTabbedFormDemo',
     () => {
       displayTabbedFormDemo();
@@ -337,4 +344,33 @@ async function displaySetupDemo () {
     }
   };
 
+}
+
+var layoutCanvas: any = require('./layout-canvas.yaml');
+
+async function displayCanvasDemo () {
+  let view = new GenericWebView(extensionContext, "Canvas");
+  view.createPanel(layoutCanvas);
+
+  view.MsgHandler = function (msg: any) {
+    if (msg.command === 'button-clicked') {
+      vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+      if (msg.id === 'close') {
+        view.close();
+      }
+    } else if (msg.command === 'radio-clicked') {
+      vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
+    } else if (msg.command === 'dropdown-clicked') {
+      vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked X!');
+      if (msg.id === 'ESP-IDF') {
+        // XXX - show ESP-IDF version
+        view.showElement('row_custom_esp_idf');
+        view.disableElement('row_custom_esp_idf');
+      } else {
+        // XXX - hide ESP-IDF version
+        view.hideElement('row_custom_esp_idf');
+        view.enableElement('create-button');
+      }
+    }
+  };
 }
