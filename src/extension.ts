@@ -326,9 +326,11 @@ async function displaySetupDemo () {
       if (msg.id === 'ESP-IDF') {
         // XXX - show ESP-IDF version
         view.showElement('row_custom_esp_idf');
+        view.disableElement('row_custom_esp_idf');
       } else {
         // XXX - hide ESP-IDF version
         view.hideElement('row_custom_esp_idf');
+        view.enableElement('create-button');
       }
     }
   };

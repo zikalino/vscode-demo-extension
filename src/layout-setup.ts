@@ -80,6 +80,7 @@ export var layoutSetup: any = {
       subitems: [
         {
           type: 'button',
+          id: 'create_button',
           text: 'Create'
         }
       ]
