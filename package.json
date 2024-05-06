@@ -30,8 +30,16 @@
         "title": "demo: Tabbed Form Demo"
       },
       {
+        "command": "vscode-demo-extension.displayComponentManagerDemo",
+        "title": "demo: Component Manager Demo"
+      },
+      {
         "command": "vscode-demo-extension.displayNewProjectDemo",
         "title": "demo: New Project Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displayNewGuiProjectDemo",
+        "title": "demo: New GUI Project Demo"
       },
       {
         "command": "vscode-demo-extension.displaySetupDemo",

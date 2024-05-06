@@ -42,6 +42,13 @@ export function activate (context: vscode.ExtensionContext) {
   );
 
   disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayNewGuiProjectDemo',
+    () => {
+      displayNewGuiProjectDemo();
+    }
+  );
+
+  disposable = vscode.commands.registerCommand(
     'vscode-demo-extension.displaySetupDemo',
     () => {
       displaySetupDemo();
@@ -61,6 +68,14 @@ export function activate (context: vscode.ExtensionContext) {
       displayTabbedFormDemo();
     }
   );
+
+  disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayComponentManagerDemo',
+    () => {
+      displayComponentManagerDemo();
+    }
+  );
+
 
   context.subscriptions.push(disposable);
 }
@@ -309,11 +324,23 @@ async function displayTabbedFormDemo () {
   view.createPanel(layoutTabbedForm);
 }
 
+async function displayComponentManagerDemo () {
+  let view = new GenericWebView(extensionContext, "Generic");
+  view.createPanel(layoutTabbedForm);
+}
+
 import { layoutNewProject } from "./layout-new-project";
 
 async function displayNewProjectDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutNewProject);
+}
+
+import { layoutNewGuiProject } from "./layout-new-gui-project";
+
+async function displayNewGuiProjectDemo () {
+  let view = new GenericWebView(extensionContext, "Generic");
+  view.createPanel(layoutNewGuiProject);
 }
 
 import { layoutSetup } from "./layout-setup";

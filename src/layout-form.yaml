@@ -3,6 +3,7 @@ id: main-form
 header:
   type: header
   title: Form Demo
+  logo: form.svg
 form:
   - type: fieldset
     subitems:
