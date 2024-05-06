@@ -1,7 +1,8 @@
-export var layoutTabbedForm: any = [
+export var layoutComponentManagerForm: any = [
     {
       type: 'header',
-      title: 'Component Manager Demo'
+      title: 'Component Manager Demo',
+      logo: 'components.svg'
     },
     {
       type: 'panels',

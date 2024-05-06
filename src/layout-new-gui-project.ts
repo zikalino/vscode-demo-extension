@@ -4,7 +4,8 @@ export var layoutNewGuiProject: any = {
   header: [
     {
       type: 'header',
-      title: 'New GUI Project'
+      title: 'New GUI Project',
+      logo: 'gui.svg'
     }
   ],
   form: [
@@ -18,49 +19,15 @@ export var layoutNewGuiProject: any = {
           subitems: [
             {
               type: 'combo',
-              id: 'platform',
-              name: 'Platform',
-              items: [
-                {
-                  name: 'ESP-IDF',
-                  description: 'Espressif ESP-IDF IoT Development Framework'
-                },
-                {
-                  name: 'Arduino on ESP-IDF',
-                  description: 'Create Arduino as a component project'
-                },
-                { name: 'Rust', description: 'Create a Rust Project' },
-                { name: 'Zephyr', description: 'Create a Zephyr Project' },
-                { name: 'NuttX', description: 'Create a NuttX Project' }
-              ]
+              id: 'framework',
+              name: 'Framework',
+              items: [ "Shiny GUI"]
             },
             {
               type: 'combo',
-              id: 'project_type',
-              name: 'Project Type',
-              items: [
-                {
-                  name: 'Empty Project',
-                  description: 'Create an Empty Project'
-                },
-                {
-                  name: 'GUI Project',
-                  description: 'Create an Empty GUI Project'
-                },
-                {
-                  name: 'Use Example',
-                  description: 'Create a Project from Selected Example'
-                },
-                {
-                  name: 'Copy Existing',
-                  description: 'Create from Existing Project'
-                },
-                {
-                  name: 'Import PlatformIO Project',
-                  description:
-                    'Create from Existing ESP-IDF Project Created with PlatformIO'
-                }
-              ]
+              id: 'platform',
+              name: 'Platform',
+              items: [ 'ESP IDF', 'Arduino', 'Rust' ]
             },
             {
               type: 'combo',
@@ -86,12 +53,21 @@ export var layoutNewGuiProject: any = {
           subitems: [
             {
               type: 'combo',
+              id: 'screen_size',
+              name: 'Screen',
+              items: [ "480x480", "480x240", "240x240"]
+            }
+          ]
+        },
+        {
+          type: 'row',
+          id: 'row_3',
+          subitems: [
+            {
+              type: 'combo',
               id: 'idf_instance',
               name: 'Select ESP-IDF Instance',
-              items: [
-                { name: 'ESP-IDF 5.0', description: 'Release Version' },
-                { name: 'ESP-IDF 5.3', description: 'Release Version' }
-              ]
+              items: [ 'ESP-IDF 5.0', 'ESP-IDF 5.3' ] 
             }
           ]
         }
@@ -119,7 +95,7 @@ export var layoutNewGuiProject: any = {
           narrow: true,
           subitems: [
             {
-              type: 'textfield',
+              type: 'folder-selector',
               id: 'project_location',
               name: 'Project Location'
             }

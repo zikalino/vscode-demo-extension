@@ -324,9 +324,12 @@ async function displayTabbedFormDemo () {
   view.createPanel(layoutTabbedForm);
 }
 
+import { layoutComponentManagerForm } from "./layout-component-manager";
+
+
 async function displayComponentManagerDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
-  view.createPanel(layoutTabbedForm);
+  view.createPanel(layoutComponentManagerForm);
 }
 
 import { layoutNewProject } from "./layout-new-project";
