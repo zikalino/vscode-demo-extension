@@ -1,0 +1,74 @@
+type: layout-welcome
+header:
+  - type: header
+    title: Shiny GUI Extension
+    logo: gui.svg
+footer:
+  - type: checkbox
+    id: show_on_startup
+    name: Show welcome page on startup
+    vertical-alignment: center
+left-column:
+  - type: text-block
+    font: header-2
+    width: narrow
+    content: Get Started
+  - type: tile
+    width: narrow
+    title: Install Shiny GUI SDK
+    content: Before you can start using this extension you need to install Shiny GUI SDK.
+    buttons:
+      - Install|codicon-gear|action-install-sdk
+  - type: tile
+    width: narrow
+    title: Create a New Project
+    content: Once SDK is installed, you can create a new project. You can choose platform (ESP-IDF, Arduino or Rust) and your screen size to create a sample project.
+    buttons:
+      - Create Project|codicon-gear|action-create-project
+right-column:
+  - type: text-block
+    font: header-2
+    width: narrow
+    content: Useful Links
+  - type: link
+    href: https://google.com
+    title: Repository
+    codicon: codicon-github
+  - type: link
+    href: https://bing.com
+    title: ESP32 Forums
+    codicon: codicon-comment
+  - type: link
+    href: https://bing.com
+    title: ESP-IDF
+    codicon: codicon-github
+  - type: link
+    href: https://bing.com
+    title: Open a New Issue
+    codicon: codicon-github
+  - type: text-block
+    font: header-3
+    width: narrow
+    content: Tutorials
+  - type: link
+    href: https://bing.com
+    title: Install and Configure
+  - type: link
+    href: https://bing.com
+    title: Basic Use
+  - type: link
+    href: https://bing.com
+    title: Debugging
+  - type: text-block
+    font: header-3
+    width: narrow
+    content: Documentation
+  - type: link
+    href: https://bing.com
+    title: XXX-1
+  - type: link
+    href: https://bing.com
+    title: XXX-2
+  - type: link
+    href: https://bing.com
+    title: XXX-3A

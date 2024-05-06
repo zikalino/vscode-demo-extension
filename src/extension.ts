@@ -23,6 +23,10 @@ export function activate (context: vscode.ExtensionContext) {
     displayWelcomeDemo();
   });
 
+  disposable = vscode.commands.registerCommand('vscode-demo-extension.displayWelcomeGuiDemo', () => {
+    displayWelcomeGuiDemo();
+  });
+
   disposable = vscode.commands.registerCommand('vscode-demo-extension.browseExamples', () => {
     browseExamples();
   });
@@ -90,6 +94,13 @@ var layoutWelcome: any = require('./layout-welcome.yaml');
 async function displayWelcomeDemo() {
   let view = new GenericWebView(extensionContext, "Welcome!");
   view.createPanel(layoutWelcome);
+}
+
+var layoutWelcomeGui: any = require('./layout-welcome-gui.yaml');
+
+async function displayWelcomeGuiDemo() {
+  let view = new GenericWebView(extensionContext, "Welcome!");
+  view.createPanel(layoutWelcomeGui);
 }
 
 import { dataExamples } from "./data-examples";
@@ -299,8 +310,6 @@ Just something should go here....
 //import { layoutForm } from "./layout-form";
 var layoutForm: any = require('./layout-form.yaml');
 
-import { layoutTabbedForm } from "./layout-tabbed-form";
-
 async function displayFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutForm);
@@ -319,12 +328,14 @@ async function displayFormDemo () {
   };
 }
 
+var layoutTabbedForm: any = require('./layout-tabbed-form.yaml');
+
 async function displayTabbedFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
   view.createPanel(layoutTabbedForm);
 }
 
-import { layoutComponentManagerForm } from "./layout-component-manager";
+var layoutComponentManagerForm: any = require('./layout-component-manager.yaml');
 
 
 async function displayComponentManagerDemo () {
@@ -339,7 +350,8 @@ async function displayNewProjectDemo () {
   view.createPanel(layoutNewProject);
 }
 
-import { layoutNewGuiProject } from "./layout-new-gui-project";
+var layoutNewGuiProject: any = require('./layout-new-gui-project.yaml');
+
 
 async function displayNewGuiProjectDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
