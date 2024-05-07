@@ -4,7 +4,8 @@ export var layoutNewProject: any = {
   header: [
     {
       type: 'header',
-      title: 'New Project X'
+      title: 'New Project X',
+      logo: 'espressif.svg'
     }
   ],
   form: [
@@ -119,7 +120,7 @@ export var layoutNewProject: any = {
           narrow: true,
           subitems: [
             {
-              type: 'textfield',
+              type: 'folder-selector',
               id: 'project_location',
               name: 'Project Location'
             }
