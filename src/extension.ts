@@ -343,7 +343,7 @@ async function displayComponentManagerDemo () {
   view.createPanel(layoutComponentManagerForm);
 }
 
-import { layoutNewProject } from "./layout-new-project";
+var layoutNewProject: any = require("./layout-new-project.yaml");
 
 async function displayNewProjectDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
@@ -358,7 +358,7 @@ async function displayNewGuiProjectDemo () {
   view.createPanel(layoutNewGuiProject);
 }
 
-import { layoutSetup } from "./layout-setup";
+var layoutSetup: any = require("./layout-setup.yaml");
 
 async function displaySetupDemo () {
   let view = new GenericWebView(extensionContext, "Setup");

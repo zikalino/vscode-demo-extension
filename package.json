@@ -14,6 +14,10 @@
   "contributes": {
     "commands": [
       {
+        "command": "vscode-demo-extension.displayWelcomeDemo",
+        "title": "demo: Welcome Screen Demo"
+      },
+      {
         "command": "vscode-demo-extension.displayWelcomeGuiDemo",
         "title": "demo: Welcome Screen Demo (GUI)"
       },
