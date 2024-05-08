@@ -30,6 +30,10 @@
         "title": "demo: Form Demo"
       },
       {
+        "command": "vscode-demo-extension.displayFormWithStepsDemo",
+        "title": "demo: Form Demo with Steps"
+      },
+      {
         "command": "vscode-demo-extension.displayTabbedFormDemo",
         "title": "demo: Tabbed Form Demo"
       },

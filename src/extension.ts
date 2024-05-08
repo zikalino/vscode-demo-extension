@@ -39,6 +39,13 @@ export function activate (context: vscode.ExtensionContext) {
   );
 
   disposable = vscode.commands.registerCommand(
+    'vscode-demo-extension.displayFormWithStepsDemo',
+    () => {
+      displayFormWithStepsDemo();
+    }
+  );
+
+  disposable = vscode.commands.registerCommand(
     'vscode-demo-extension.displayNewProjectDemo',
     () => {
       displayNewProjectDemo();
@@ -307,11 +314,30 @@ Just something should go here....
   view.createPanel(formDefinition);
 }
 
-//import { layoutForm } from "./layout-form";
 var layoutForm: any = require('./layout-form.yaml');
 
 async function displayFormDemo () {
   let view = new GenericWebView(extensionContext, "Generic");
+  view.createPanel(layoutForm);
+
+  view.MsgHandler = function (msg: any) {
+    if (msg.command === 'button-clicked') {
+      vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+      if (msg.id === 'close') {
+        view.close();
+      }
+    } else if (msg.command === 'radio-clicked') {
+      vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
+    } else if (msg.command === 'dropdown-clicked') {
+      vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked!');
+    }
+  };
+}
+
+var layoutForm: any = require('./layout-form-with-steps.yaml');
+
+async function displayFormWithStepsDemo () {
+  let view = new GenericWebView(extensionContext, "Steps");
   view.createPanel(layoutForm);
 
   view.MsgHandler = function (msg: any) {

@@ -1,0 +1,103 @@
+type: layout-form
+id: main-form
+header:
+  type: header
+  title: Form Demo
+  logo: form.svg
+form:
+  - type: fieldset
+    id: page_1
+    subitems:
+      - type: datagrid
+        subitems:
+          - type: 'grid-header'
+            subitems:
+              - type: 'grid-header-cell'
+                content: 'Type'
+              - type: 'grid-header-cell'
+                content: 'Version'
+              - type: 'grid-header-cell'
+                content: 'Location'
+              - type: 'grid-header-cell'
+                content: 'Actions'
+          - type: grid-row
+            subitems:
+              - type: 'grid-cell'
+                content: 'ESP-IDF'
+              - type: 'grid-cell'
+                content: 'v5.1.2'
+              - type: 'grid-cell'
+                content: 'c:/users/zim/esp/v5.1.2/esp-idf'
+              - type: 'grid-cell'
+                content:
+                  '<a title="Delete this SDK" class="tooltip codicon codicon-trash"></a><a title="Verify / Synchronize this SDK" class="tooltip codicon codicon-sync"></a>'
+          - type: 'grid-row'
+            subitems:
+              - type: 'grid-cell'
+                content: 'ESP-IDF'
+              - type: 'grid-cell'
+                content: 'v5.1.3'
+              - type: 'grid-cell'
+                content: 'c:/users/zim/esp/v5.1.3/esp-idf'
+              - type: 'grid-cell'
+                content: '<a title="Delete this SDK" class="tooltip codicon codicon-trash"></a><a title="Verify / Synchronize this SDK" class="tooltip codicon codicon-sync"></a>'
+  - type: 'fieldset'
+    id: page_2
+    subitems:
+      - type: 'row'
+        subitems:
+          - type: 'combo'
+            id: 'sdk_type'
+            name: 'Combo with Details'
+            items:
+              - name: 'ESP-IDF'
+                description: 'Espressif ESP-IDF IoT Development Framework'
+          - type: 'combo'
+            id: 'sdk_version'
+            name: 'Basic Combo'
+            items: ['v5.1.3', 'v5.1.2', 'develop']
+  - type: 'fieldset'
+    id: page_3
+    subitems:
+      - type: 'row'
+        subitems:
+          - type: 'input'
+            id: 'project-name'
+            name: 'Project Name'
+          - type: 'button'
+            id: 'buttonx'
+            text: 'Button'
+          - type: 'textarea'
+            id: 'textareax'
+          - type: 'textfield'
+            id: 'textfieldx'
+          - type: 'progressring'
+          - type: 'tag'
+          - type: 'badge'
+          - type: 'link'
+          - type: 'radiogroup'
+            subitems:
+              - id: 'radio_1'
+                value: 'r1'
+                text: 'Radio 1'
+                type: 'radio'
+              - id: 'radio_2'
+                value: 'r2'
+                text: 'Radio 2'
+                type: 'radio'
+          - type: 'checkbox'
+            text: 'Sample Checkbox'
+            id: 'checkbox_id'
+footer:
+  - type: footer
+    id: footerxx
+    subitems:
+      - type: button
+        id: prev
+        text: Previous
+      - type: button
+        id: next
+        text: Next
+      - type: button
+        id: close
+        text: Close
