@@ -140,3 +140,10 @@ form:
             content: Nice description of the component will go here.
             buttons:
               - Install|codicon-cloud-download|action-install-sdk
+footer:
+  - type: footer
+    id: footerxx
+    subitems:
+      - type: button
+        id: close
+        text: Close
