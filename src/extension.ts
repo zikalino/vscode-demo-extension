@@ -336,6 +336,7 @@ async function displayFormDemo () {
 
 var layoutForm: any = require('./layout-form-with-steps.yaml');
 
+var page: number = 1;
 async function displayFormWithStepsDemo () {
   let view = new GenericWebView(extensionContext, "Steps");
   view.createPanel(layoutForm);
@@ -343,8 +344,21 @@ async function displayFormWithStepsDemo () {
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'button-clicked') {
       vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
-      if (msg.id === 'close') {
-        view.close();
+      if (msg.id === 'prev') {
+        if (page > 1) {
+          page -= 1;
+        }
+      } else if (msg.id === 'next') {
+        if (page < 5) {
+          page += 1;
+        }
+      }
+      for (var i = 1; i < 5; i++) {
+        if (i === page) {
+          view.showElement("page_" + i.toString());
+        } else {
+          view.hideElement("page_" + i.toString());
+        }
       }
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
