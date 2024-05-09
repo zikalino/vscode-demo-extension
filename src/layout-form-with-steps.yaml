@@ -8,6 +8,11 @@ form:
   - type: fieldset
     id: page_1
     subitems:
+      - type: text-block
+        font: header-1
+        width: narrow
+        content: Step 1</br>
+      - type: separator
       - type: datagrid
         subitems:
           - type: 'grid-header'
@@ -44,6 +49,11 @@ form:
   - type: 'fieldset'
     id: page_2
     subitems:
+      - type: text-block
+        font: header-1
+        width: narrow
+        content: Step 2
+      - type: separator
       - type: 'row'
         subitems:
           - type: 'combo'
@@ -59,6 +69,11 @@ form:
   - type: 'fieldset'
     id: page_3
     subitems:
+      - type: text-block
+        font: header-1
+        width: narrow
+        content: Step 3
+      - type: separator
       - type: 'row'
         subitems:
           - type: 'input'
@@ -89,6 +104,7 @@ form:
             text: 'Sample Checkbox'
             id: 'checkbox_id'
 footer:
+  - type: separator
   - type: footer
     id: footerxx
     subitems:
@@ -99,5 +115,5 @@ footer:
         id: next
         text: Next
       - type: button
-        id: close
-        text: Close
+        id: complete
+        text: Complete

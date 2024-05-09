@@ -341,9 +341,33 @@ async function displayFormWithStepsDemo () {
   let view = new GenericWebView(extensionContext, "Steps");
   view.createPanel(layoutForm);
 
+  function reconfigure() {
+    for (var i = 1; i < 5; i++) {
+      if (i === page) {
+        view.showElement("page_" + i.toString());
+      } else {
+        view.hideElement("page_" + i.toString());
+      }
+
+      if (page === 1) {
+        view.hideElement("prev");
+        view.showElement("next");
+        view.hideElement("complete");
+      } else if (page === 3) {
+        view.hideElement("next");
+        view.showElement("prev");
+        view.showElement("complete");
+      } else {
+        view.showElement("prev");
+        view.showElement("next");
+        view.hideElement("complete");
+      }
+    }
+  }
+
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'button-clicked') {
-      vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+      // vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
       if (msg.id === 'prev') {
         if (page > 1) {
           page -= 1;
@@ -353,17 +377,13 @@ async function displayFormWithStepsDemo () {
           page += 1;
         }
       }
-      for (var i = 1; i < 5; i++) {
-        if (i === page) {
-          view.showElement("page_" + i.toString());
-        } else {
-          view.hideElement("page_" + i.toString());
-        }
-      }
+      reconfigure();
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
     } else if (msg.command === 'dropdown-clicked') {
       vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked!');
+    } else if (msg.command === 'ready') {
+      reconfigure();
     }
   };
 }
