@@ -1,8 +1,8 @@
 type: layout-welcome
 header:
   - type: header
-    title: Shiny GUI Extension
-    logo: gui.svg
+    title: Slint Extension
+    logo: slint.svg
 footer:
   - type: checkbox
     id: show_on_startup
@@ -15,8 +15,8 @@ left-column:
     content: Get Started
   - type: tile
     width: narrow
-    title: Install Shiny GUI SDK
-    content: Before you can start using this extension you need to install Shiny GUI SDK.
+    title: Install Slint SDK
+    content: Before you can start using this extension you need to install Slint SDK.
     buttons:
       - Install|codicon-gear|action-install-sdk
   - type: tile

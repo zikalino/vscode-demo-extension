@@ -47,7 +47,7 @@
       },
       {
         "command": "vscode-demo-extension.displayNewGuiProjectDemo",
-        "title": "demo: New GUI Project Demo"
+        "title": "demo: New Slint Project"
       },
       {
         "command": "vscode-demo-extension.displaySetupDemo",
