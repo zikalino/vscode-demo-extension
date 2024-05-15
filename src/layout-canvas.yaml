@@ -1,14 +1,14 @@
 type: layout-canvas
 toolbox:
-  - name: rectangle
+  - name: Rectangle
     symbol: "toolbar-thumbnail-rect"
-  - name: paragraph
+  - name: Paragraph
     symbol: "toolbar-thumbnail-text"
-  - name: label
+  - name: Label
     symbol: "toolbar-thumbnail-label"
-  - name: button
+  - name: Button
     symbol: "toolbar-thumbnail-button"
-  - name: select
+  - name: Select
     symbol: "toolbar-thumbnail-combo-box2"
   - name: checkbox
     symbol: "toolbar-thumbnail-checkbox2"
