@@ -7,59 +7,59 @@ grid:
 toolbox:
   - name: Rectangle
     symbol: "toolbar-thumbnail-rect"
-  - name: Paragraph
+  - name: TextPlaceholder
     symbol: "toolbar-thumbnail-text"
   - name: Label
     symbol: "toolbar-thumbnail-label"
   - name: Button
     symbol: "toolbar-thumbnail-button"
-  - name: Select
+  - name: Combo
     symbol: "toolbar-thumbnail-combo-box2"
-  - name: checkbox
+  - name: Checkbox
     symbol: "toolbar-thumbnail-checkbox2"
-  - name: textarea
+  - name: TextArea
     symbol: "toolbar-thumbnail-textarea2"
-  - name: textinput
+  - name: Text
     symbol: "toolbar-thumbnail-text-input"
-  - name: datepicker
+  - name: DatePicker
     symbol: "toolbar-thumbnail-date-picker3"
-  - name: stepperinput
+  - name: StepperInput
     symbol: "toolbar-thumbnail-stepper"
-  - name: progressbar
+  - name: ProgressBar
     symbol: "toolbar-thumbnail-horizontal-progress-bar"
-  - name: slider
+  - name: Slider
     symbol: "toolbar-thumbnail-slider2"
-  - name: imageplaceholder
+  - name: ImagePlaceholder
     symbol: "toolbar-thumbnail-image-placeholder-2"
-  - name: placeholder
+  - name: Placeholder
     symbol: "toolbar-thumbnail-image-placeholder-2"
   - name: textplaceholder
     symbol: "toolbar-thumbnail-text-placeholder"
-  - name: videoplayer
+  - name: VideoPlayer
     symbol: "toolbar-thumbnail-video-player"
-  - name: map
+  - name: Map
     symbol: "toolbar-thumbnail-map2"
-  - name: tabs
+  - name: Tabs
     symbol: "toolbar-thumbnail-tab-bar-2"
-  - name: table
+  - name: Table
     symbol: "toolbar-thumbnail-grid-3"
-  - name: calendar
+  - name: Calendar
     symbol: "toolbar-thumbnail-calendar"
-  - name: toggle
-    symbol: toolbar-thumbnail-toggle
-  - name: scrollbar
+  - name: Toggle
+    symbol: "toolbar-thumbnail-toggle"
+  - name: Scrollbar
     symbol: "toolbar-thumbnail-scrollbar"
-  - name: circle
+  - name: Circle
     symbol: "toolbar-thumbnail-shape-circle"
-  - name: horizontalline
+  - name: HorizontalLine
     symbol: "toolbar-thumbnail-line-h"
-  - name: verticalline
+  - name: VerticalLine
     symbol: "toolbar-thumbnail-line-v"
-  - name: container
+  - name: Container
     symbol: "toolbar-thumbnail-container"
-  - name: keyboard
+  - name: Keyboard
     symbol: "toolbar-thumbnail-legacy-ios-keyboard"
-  - name: window
+  - name: Window
     symbol: "toolbar-thumbnail-legacy-window"
 symbols: |
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
