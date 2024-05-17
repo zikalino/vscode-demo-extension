@@ -1,4 +1,9 @@
 type: layout-canvas
+grid:
+  minor: 8
+  major: 10
+  width: 320
+  height: 240
 toolbox:
   - name: Rectangle
     symbol: "toolbar-thumbnail-rect"
