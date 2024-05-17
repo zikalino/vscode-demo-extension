@@ -1,5 +1,3 @@
-// file: esbuild.js
-
 const { build } = require("esbuild");
 const { yamlPlugin } = require("esbuild-plugin-yaml");
 
@@ -26,8 +24,10 @@ const webviewConfig = {
   ...baseConfig,
   target: "es2020",
   format: "esm",
+  bundle: true,
   entryPoints: ["./src/vscode-helper-toolkit/src/webview/main.ts"],
   outfile: "./out/webview.js",
+  loader: {".html": "text"}
 };
 
 (async () => {
