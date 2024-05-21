@@ -62,6 +62,18 @@ toolbox:
   - name: Window
     symbol: "toolbar-thumbnail-legacy-window"
 symbols: |
+        <style>
+          :root {
+            --stencil-color: #40444a;
+            --stencil-color2: #848d93;
+            --stencil-color-light: #fff;
+            --stencil-tone1: #fff;
+            --stencil-tone2: #eaeaf0;
+            --stencil-tone3: #d6d9dd;
+            --stencil-tone4: #a8afb7;
+            --stencil-bg: #fff;
+          }
+        </style>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <symbol
             xmlns="http://www.w3.org/2000/svg"
