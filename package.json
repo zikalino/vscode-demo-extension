@@ -1,7 +1,7 @@
 {
   "name": "vscode-demo-extension",
-  "displayName": "Experimental demo Extension",
-  "description": "Experimental demo Extension",
+  "displayName": "Experimental Demo Extension",
+  "description": "Experimental Demo Extension",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -47,7 +47,7 @@
       },
       {
         "command": "vscode-demo-extension.displayNewGuiProjectDemo",
-        "title": "demo: New Slint Project"
+        "title": "demo: New LVGL Project"
       },
       {
         "command": "vscode-demo-extension.displaySetupDemo",
@@ -57,7 +57,13 @@
         "command": "vscode-demo-extension.displayCanvasDemo",
         "title": "demo: Canvas Demo"
       }
-    ]
+    ],
+   "snippets": [
+    {
+      "language": "c",
+      "path": "./snippets/snippets.json"
+    }
+   ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

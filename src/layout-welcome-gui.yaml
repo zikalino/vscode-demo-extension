@@ -1,8 +1,8 @@
 type: layout-welcome
 header:
   - type: header
-    title: Slint Extension
-    logo: slint.svg
+    title: LVGL Extension
+    logo: lvgl.png
 footer:
   - type: checkbox
     id: show_on_startup
@@ -15,8 +15,8 @@ left-column:
     content: Get Started
   - type: tile
     width: narrow
-    title: Install Slint SDK
-    content: Before you can start using this extension you need to install Slint SDK.
+    title: Install LVGL SDK
+    content: Before you can start using this extension you need to install LVGL SDK.
     buttons:
       - Install|codicon-gear|action-install-sdk
   - type: tile

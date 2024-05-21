@@ -2,8 +2,8 @@ type: "layout-form"
 id: "root"
 header: 
 - type: "header"
-  title: "New Slint Project"
-  logo: "slint.svg"
+  title: "New LVGL Project"
+  logo: "lvgl.png"
 form: 
 - type: "fieldset"
   id: "fieldset_1"
@@ -15,7 +15,7 @@ form:
       id: "framework"
       name: "Framework"
       items: 
-      - "Slint"
+      - "LVGL"
     - type: "combo"
       id: "platform"
       name: "Platform"
