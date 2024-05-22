@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import YAML from 'yaml';
 import { marked } from 'marked';
-import { GenericWebView } from './vscode-helper-toolkit/src/genericwebview';
+import GenericWebView from '@zim.kalinowski/vscode-helper-toolkit';
 
 var extensionUri: vscode.Uri;
 var mediaFolder: vscode.Uri;
@@ -111,6 +111,7 @@ async function displayWelcomeGuiDemo() {
 }
 
 import { dataExamples } from "./data-examples";
+import { GenericWebView } from '@zim.kalinowski/vscode-helper-toolkit';
 
 async function browseExamples() {
 

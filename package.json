@@ -58,12 +58,12 @@
         "title": "demo: Canvas Demo"
       }
     ],
-   "snippets": [
-    {
-      "language": "c",
-      "path": "./snippets/snippets.json"
-    }
-   ]
+    "snippets": [
+      {
+        "language": "c",
+        "path": "./snippets/snippets.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
