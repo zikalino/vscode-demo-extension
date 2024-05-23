@@ -304,10 +304,6 @@ Just something should go here....
           view.postMessage(setActionsMsg);
         }
         return;
-      case 'save-definition':
-        console.log("GOT DEFINITION: " + msg.definition);
-
-        return;
       default:
         console.log('XXX');
     }
@@ -466,6 +462,8 @@ async function displayCanvasDemo () {
       }
     } else if (msg.command === 'ready') {
       view.requestDefinition();
+    } else if (msg.command === 'save-definition') {
+      console.log("GOT DEFINITION: " + msg.definition);
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
     } else if (msg.command === 'dropdown-clicked') {
