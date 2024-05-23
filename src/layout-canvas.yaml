@@ -5,20 +5,20 @@ grid:
   width: 320
   height: 240
 widgets:
-  - btn:
-      id: button1
-      x: 50
-      y: 50
-      w: 100
-      h: 20
-      label: ButtonX
-  - btn:
-      id: button2
-      x: 50
-      y: 80
-      w: 100
-      h: 20
-      label: ButtonY
+  - type: button
+    id: button1
+    x: 50
+    y: 50
+    w: 100
+    h: 20
+    label: Button A
+  - type: button
+    id: button1
+    x: 50
+    y: 80
+    w: 100
+    h: 20
+    label: Button B
 
 toolbox:
   - name: Rectangle
