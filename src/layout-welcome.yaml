@@ -38,6 +38,7 @@ right-column:
     font: header-2
     width: narrow
     content: Useful Links
+    padding-bottom: 10px
   - type: link
     href: https://google.com
     title: Repository
@@ -58,6 +59,7 @@ right-column:
     font: header-3
     width: narrow
     content: Tutorials
+    padding-bottom: 10px
   - type: link
     href: https://bing.com
     title: Install and Configure
@@ -71,6 +73,7 @@ right-column:
     font: header-3
     width: narrow
     content: Documentation
+    padding-bottom: 10px
   - type: link
     href: https://bing.com
     title: XXX-1

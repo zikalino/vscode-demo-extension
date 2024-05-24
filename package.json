@@ -56,6 +56,10 @@
       {
         "command": "vscode-demo-extension.displayCanvasDemo",
         "title": "demo: Canvas Demo"
+      },
+      {
+        "command": "vscode-demo-extension.displayCanvasMapDemo",
+        "title": "demo: Canvas Map Demo"
       }
     ],
     "snippets": [
