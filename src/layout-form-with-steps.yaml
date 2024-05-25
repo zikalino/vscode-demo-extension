@@ -2,7 +2,7 @@ type: layout-form
 id: main-form
 header:
   type: header
-  title: Form Demo
+  title: Form Demo with Steps
   logo: form.svg
 form:
   - type: fieldset

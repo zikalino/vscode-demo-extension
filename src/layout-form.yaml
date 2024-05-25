@@ -2,11 +2,26 @@ type: layout-form
 id: main-form
 header:
   type: header
-  title: Form Demo
+  title: Form Demo XX
   logo: form.svg
 form:
   - type: fieldset
     subitems:
+      - type: 'action-row'
+        id: install-scoop
+        action-name: Install Scoop
+        check: scoop --version
+        install: iwr -useb get.scoop.sh | iex
+      - type: 'action-row'
+        id: install-go
+        action-name: Install Go
+        check: go version
+        install: scoop install tinygo
+      - type: 'action-row'
+        id: install-tinygo
+        action-name: Install TinyGo
+        check: tinygo version
+        install: scoop install tinygo
       - type: datagrid
         subitems:
           - type: 'grid-header'

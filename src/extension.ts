@@ -341,12 +341,12 @@ async function displayFormDemo () {
   };
 }
 
-var layoutForm: any = require('./layout-form-with-steps.yaml');
+var layoutFormWithSteps: any = require('./layout-form-with-steps.yaml');
 
 var page: number = 1;
 async function displayFormWithStepsDemo () {
   let view = new GenericWebView(extensionContext, "Steps");
-  view.createPanel(layoutForm);
+  view.createPanel(layoutFormWithSteps);
 
   function reconfigure() {
     for (var i = 1; i < 5; i++) {
@@ -432,22 +432,32 @@ async function displaySetupDemo () {
   view.createPanel(layoutSetup);
 
   view.MsgHandler = function (msg: any) {
-    if (msg.command === 'button-clicked') {
-      vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
+    if (msg.command === 'ready') {
+      view.showElement('row_custom_esp_idf');
+
+      view.showElement("fieldset_tinygo");
+    } else if (msg.command === 'button-clicked') {
+      //vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
       if (msg.id === 'close') {
         view.close();
+      } else if (msg.id === 'create_button') {
+        view.runStepsVerification();
       }
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
     } else if (msg.command === 'dropdown-clicked') {
       vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked X!');
+
+      view.hideElement("fieldset_tinygo");
+      view.hideElement('row_custom_esp_idf');
+
       if (msg.id === 'ESP-IDF') {
         // XXX - show ESP-IDF version
         view.showElement('row_custom_esp_idf');
         view.disableElement('row_custom_esp_idf');
+      } else if (msg.id === 'TinyGo') {
+        view.showElement("fieldset_tinygo");
       } else {
-        // XXX - hide ESP-IDF version
-        view.hideElement('row_custom_esp_idf');
         view.enableElement('create-button');
       }
     }

@@ -21,7 +21,7 @@ form:
               - Zephyr
               - NuttX
               - MicroPython
-              - Go
+              - TinyGo
               - .net NanoFramework
       - type: row
         id: row_custom_esp_idf
@@ -37,16 +37,21 @@ form:
   - type: fieldset
     id: fieldset_tinygo
     subitems:
-      - type: step
-        id: step_tinygo_install_go
-        description: Install Go
-        verify: go --version
+      - type: 'action-row'
+        id: install-scoop
+        action-name: Install Scoop
+        check: scoop --version
+        install: iwr -useb get.scoop.sh | iex
+      - type: 'action-row'
+        id: install-go
+        action-name: Install Go
+        check: go version
         install: scoop install go
-      - type: step
-        id: step_tinygo_install_tinygo
-        description: Install TinyGo
-        verify: scoop install tinygo
-        install: tinygo --version
+      - type: 'action-row'
+        id: install-tinygo
+        action-name: Install TinyGo
+        check: tinygo version
+        install: scoop install tinygo
 footer:
   - type: footer
     id: footer
