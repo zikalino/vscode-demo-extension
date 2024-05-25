@@ -434,14 +434,13 @@ async function displaySetupDemo () {
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'ready') {
       view.showElement('fieldset_esp_idf');
-
       view.showElement("fieldset_tinygo");
     } else if (msg.command === 'button-clicked') {
       //vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
       if (msg.id === 'close') {
         view.close();
       } else if (msg.id === 'create_button') {
-        view.runStepsVerification();
+        view.runStepsInstallation();
       }
     } else if (msg.command === 'radio-clicked') {
       vscode.window.showInformationMessage('Radio ' + msg.id + ' Clicked!');
@@ -460,6 +459,7 @@ async function displaySetupDemo () {
       } else {
         view.enableElement('create-button');
       }
+      view.runStepsVerification();
     }
   };
 
