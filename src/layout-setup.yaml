@@ -23,6 +23,9 @@ form:
               - MicroPython
               - TinyGo
               - .net NanoFramework
+  - type: fieldset
+    id: fieldset_esp_idf
+    subitems:
       - type: row
         id: row_custom_esp_idf
         subitems:
@@ -34,6 +37,16 @@ form:
                 description: Release Version
               - name: ESP-IDF 5.3
                 description: Release Version
+      - type: 'action-row'
+        id: idf-install-scoop
+        action-name: Install Scoop
+        check: scoop --version
+        install: iwr -useb get.scoop.sh | iex
+      - type: 'action-row'
+        id: idf-install-git
+        action-name: Install Git
+        check: git --version
+        install: scoop install git
   - type: fieldset
     id: fieldset_tinygo
     subitems:

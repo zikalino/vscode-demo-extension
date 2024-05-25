@@ -433,7 +433,7 @@ async function displaySetupDemo () {
 
   view.MsgHandler = function (msg: any) {
     if (msg.command === 'ready') {
-      view.showElement('row_custom_esp_idf');
+      view.showElement('fieldset_esp_idf');
 
       view.showElement("fieldset_tinygo");
     } else if (msg.command === 'button-clicked') {
@@ -449,12 +449,12 @@ async function displaySetupDemo () {
       vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked X!');
 
       view.hideElement("fieldset_tinygo");
-      view.hideElement('row_custom_esp_idf');
+      view.hideElement('fieldset_esp_idf');
 
       if (msg.id === 'ESP-IDF') {
         // XXX - show ESP-IDF version
-        view.showElement('row_custom_esp_idf');
-        view.disableElement('row_custom_esp_idf');
+        view.showElement('fieldset_esp_idf');
+        view.disableElement('fieldset_esp_idf');
       } else if (msg.id === 'TinyGo') {
         view.showElement("fieldset_tinygo");
       } else {
@@ -487,11 +487,11 @@ async function displayCanvasDemo () {
       vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked X!');
       if (msg.id === 'ESP-IDF') {
         // XXX - show ESP-IDF version
-        view.showElement('row_custom_esp_idf');
-        view.disableElement('row_custom_esp_idf');
+        view.showElement('fieldset_esp_idf');
+        view.disableElement('fieldset_esp_idf');
       } else {
         // XXX - hide ESP-IDF version
-        view.hideElement('row_custom_esp_idf');
+        view.hideElement('fieldset_esp_idf');
         view.enableElement('create-button');
       }
     }
@@ -520,11 +520,11 @@ async function displayCanvasMapDemo () {
       vscode.window.showInformationMessage('Dropdown item ' + msg.id + ' Clicked X!');
       if (msg.id === 'ESP-IDF') {
         // XXX - show ESP-IDF version
-        view.showElement('row_custom_esp_idf');
-        view.disableElement('row_custom_esp_idf');
+        view.showElement('fieldset_esp_idf');
+        view.disableElement('fieldset_esp_idf');
       } else {
         // XXX - hide ESP-IDF version
-        view.hideElement('row_custom_esp_idf');
+        view.hideElement('fieldset_esp_idf');
         view.enableElement('create-button');
       }
     }
